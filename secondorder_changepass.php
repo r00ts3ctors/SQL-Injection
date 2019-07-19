@@ -58,7 +58,7 @@ ini_set('display_errors', 1);
 		$_SESSION["descr"] = $row[4];
 
     // untuk perubahan harus di lakukan proteksi
-    
+
 }
 ?>
 
@@ -116,11 +116,6 @@ ini_set('display_errors', 1);
 
 	  <div class="footer">
 		<p><h4><a href="index.php">Home</a><h4></p>
-      </div>
-
-
-	  <div class="footer">
-		<p>Riyaz Walikar | @riyazwalikar | karniv0re@null.co.in</p>
       </div>
 
 	</div> <!-- /container -->

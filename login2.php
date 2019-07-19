@@ -14,14 +14,14 @@ ini_set('display_errors', 1);
 
   <body>
   <div class="container-narrow">
-		
+
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
 				Login Page 2 - Login using the credentials created using <a href="register.php">register.php</a>
 				<?php if (!empty($_REQUEST['msg'])){echo "<br />Please Login to continue to searchproducts.php";} ?>
 			</p>
         </div>
-		
+
 		<div class="response">
 		<form method="POST" autocomplete="off">
 			<p style="color:white">
@@ -30,15 +30,15 @@ ini_set('display_errors', 1);
 			</p>
 			<br />
 			<p>
-			<input type="submit" value="Submit"/> 
+			<input type="submit" value="Submit"/>
 			<input type="reset" value="Reset"/>
 			</p>
 		</form>
         </div>
-    
-        
+
+
 		<br />
-		
+
       <div class="row marketing">
         <div class="col-lg-6">
 
@@ -62,7 +62,7 @@ if (isset($_GET['debug']))
 	{
 		die('Error: ' . mysqli_error($con));
 	}
-	
+
 	$result = mysqli_query($con,$q);
 
 	// if (!$result) {
@@ -70,24 +70,24 @@ if (isset($_GET['debug']))
  //    		echo "error";
 	// }
 
-if (mysqli_warning_count($con)) { 
-   $e = mysqli_get_warnings($con); 
+if (mysqli_warning_count($con)) {
+   $e = mysqli_get_warnings($con);
    if ($e){
-   do { 
-       echo "Warning: $e->errno: $e->message\n"; 
+   do {
+       echo "Warning: $e->errno: $e->message\n";
    } while ($e->next()); }
-} 
+}
 
 	echo "<br /><br />";
 	$row = mysqli_fetch_array($result);
 
-	
+
 	if ($row){
 	//$_SESSION["id"] = $row[0];
 	$_SESSION["username"] = $row[1];
 	$_SESSION["name"] = $row[3];
 	//ob_clean();
-	
+
 	header('Location: searchproducts.php');
 	}
 	else{
@@ -100,15 +100,13 @@ if (mysqli_warning_count($con)) {
 
 	</div>
 	</div>
-	  
+
 	  <div class="footer">
 		<p><h4><a href="index.php">Home</a><h4></p>
       </div>
 
-	  <div class="footer">
-		<p>Riyaz Walikar | @riyazwalikar | karniv0re@null.co.in</p>
-      </div>
+	 
 	</div> <!-- /container -->
-  
+
 </body>
 </html>

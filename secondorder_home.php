@@ -17,13 +17,13 @@ ini_set('display_errors', 1);
 
   <body>
   <div class="container-narrow">
-		
+
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
 				Second Order SQL Injection example - Home</a>
 				</p>
 		</div>
-		
+
 <?php
 		$q = "Select * from users where id = ".$_SESSION["id"];
 
@@ -41,23 +41,23 @@ ini_set('display_errors', 1);
 		}
 
 		$row = mysqli_fetch_array($result);
-	
+
 		if ($row){
 		$_SESSION["username"] = $row[1];
 		$_SESSION["name"] = $row[3];
 		$_SESSION["descr"] = $row[4];
 }
-?>		
-		
+?>
+
 		<div class="response">
-		
+
 			<p style="color:white">
 			<table class="response">
 			<form method="POST" autocomplete="off">
-			
+
 			<tr>
 				<td>
-					Username:  
+					Username:
 				</td>
 				<td>
 					<?php echo $_SESSION["username"]; ?>
@@ -66,7 +66,7 @@ ini_set('display_errors', 1);
 
 			<tr>
 				<td>
-					Name:  
+					Name:
 				</td>
 				<td>
 					<?php echo $_SESSION["name"]; ?>
@@ -75,7 +75,7 @@ ini_set('display_errors', 1);
 
 			<tr>
 				<td>
-					Description: 
+					Description:
 				</td>
 				<td>
 					<?php echo $_SESSION["descr"]; ?>
@@ -90,18 +90,18 @@ ini_set('display_errors', 1);
 				<td>
 					<input type="button" onclick="javascript:window.location.assign('secondorder_changepass.php')" value="Change Password"/>
 				</td>
-				
-			</tr>			
+
+			</tr>
 			</table>
-				
+
 			</p>
 
 		</form>
         </div>
-    
-        
+
+
 		<br />
-		
+
       <div class="row marketing">
         <div class="col-lg-6">
 
@@ -120,11 +120,11 @@ $descr = $_REQUEST['descr'];
 	{
 		die('Error: ' . mysqli_error($con));
 	}
-	
-	
+
+
 	$_SESSION["username"] = $username;
 	$_SESSION["fname"] = $fname;
-	
+
 	ob_clean();
 	header('Location:searchproducts.php');
 	}
@@ -132,18 +132,14 @@ $descr = $_REQUEST['descr'];
 
 	</div>
 	</div>
-	  
-	  
+
+
 	  <div class="footer">
 		<p><h4><a href="index.php">Home</a><h4></p>
       </div>
 	  
-	  
-	  <div class="footer">
-		<p>Riyaz Walikar | @riyazwalikar | karniv0re@null.co.in</p>
-      </div>
 
 	</div> <!-- /container -->
-  
+
 </body>
 </html>

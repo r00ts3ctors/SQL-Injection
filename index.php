@@ -50,10 +50,6 @@
 
       </div>
 
-      <div class="footer">
-		<p>Riyaz Walikar | @riyazwalikar | karniv0re@null.co.in</p>
-      </div>
-
     </div> <!-- /container -->
 
 

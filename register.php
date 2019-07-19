@@ -13,22 +13,22 @@ ini_set('display_errors', 1);
 
   <body>
   <div class="container-narrow">
-		
+
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
 				User registration page - Create users here</a>
 			</p>
         </div>
-		
+
 		<div class="response">
-		
+
 			<p style="color:white">
 			<table class="response">
 			<form method="POST" autocomplete="off">
-			
+
 			<tr>
 				<td>
-					Enter your username:  
+					Enter your username:
 				</td>
 				<td>
 					<input type="text" id="uid" name="uid"><br />
@@ -37,7 +37,7 @@ ini_set('display_errors', 1);
 
 			<tr>
 				<td>
-					Enter a password:  
+					Enter a password:
 				</td>
 				<td>
 					<input type="password" id="password" name="password"><br />
@@ -46,7 +46,7 @@ ini_set('display_errors', 1);
 
 			<tr>
 				<td>
-					Enter your Name: 
+					Enter your Name:
 				</td>
 				<td>
 					<input type="text" id="name" name="name"><br />
@@ -60,29 +60,29 @@ ini_set('display_errors', 1);
 				<td>
 					<textarea rows="8" cols="50" id="descr" name="descr"></textarea><br />
 				</td>
-			</tr>	
+			</tr>
 <tr>
 <td>
 </td>
 </tr>
 			<tr>
 				<td>
-					<input type="submit" value="Submit"/> 
+					<input type="submit" value="Submit"/>
 				</td>
 				<td>
 					<input type="reset" value="Reset"/>
 				</td>
-			</tr>			
+			</tr>
 			</table>
-				
+
 			</p>
 
 		</form>
         </div>
-    
-        
+
+
 		<br />
-		
+
       <div class="row marketing">
         <div class="col-lg-6">
 
@@ -111,31 +111,26 @@ if (isset($_GET['debug']))
 	{
 		die('Error: ' . mysqli_error($con));
 	}
-	
-	
+
+
 	$_SESSION["username"] = $username;
 	$_SESSION["fname"] = $fname;
-	
+
 	ob_clean();
 	header('Location:searchproducts.php');
 	}
-	
+
 ?>
 
 	</div>
 	</div>
-	  
-	  
+
+
 	  <div class="footer">
 		<p><h4><a href="index.php">Home</a><h4></p>
       </div>
-	  
-	  
-	  <div class="footer">
-		<p>Riyaz Walikar | @riyazwalikar | karniv0re@null.co.in</p>
-      </div>
 
 	</div> <!-- /container -->
-  
+
 </body>
 </html>
