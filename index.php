@@ -10,9 +10,9 @@
 
     <div class="container-narrow">
         <div class="jumbotron">
-			<h1 style="color:white">SQL Injection - Training App</h1>
+			<h1 style="color:white">SQL Injection - Training</h1>
 			<p class="lead" style="color:white">
-				Practical hands on session for manual detection and exploitation of SQL Injection flaws
+        Pada panduan ini merupakan sesi dalam mencari bug menggunakan metode manual untuk sql injections
 			</p>
         </div>
 		<br />
@@ -20,31 +20,43 @@
       <div class="row marketing">
         <div class="col-lg-6">
 		  <h4><a href="register.php" style="color:#B31D14">register.php - user registration page</a></h4>
-          <p>This page can be used to create users that will be used throughout the session. Create atleast 3 users.</p>
+          <p>
+            Halaman ini memberikan user / pengguna untuk dapat menggunakan pendaftaran silahkan buat beberapa user di dalamnya.
+
+          </p>
 
           <h4><a href="login1.php" style="color:#B31D14">login1.php - basic injection page</a></h4>
-          <p>This page contains the most simplistic form of SQL injection flaw. Verbose errors, can be used to enumerate columns and bypass user authentication altogether</p>
+          <p>
+            Halaman ini merupakan halaman sederhana dalam sql injection dengan memanfaatkan enumerate untuk mem bypass user auth algoritma
+
+          </p>
 
 		  <h4><a href="login2.php" style="color:#B31D14">login2.php - basic injection page with brackets</a></h4>
-          <p>This page contains the most simplistic form of SQL injection flaw. Verbose errors, can be used to enumerate columns and bypass user authentication altogether. Backend query uses brackets to enclose variables. Very common on the Internet.</p>
+          <p>
+            Halaman berikut mengandung yang sedikit di manipulasi untuk dapat di manipulasi query yang ada.
 
-          <h4><a href="searchproducts.php" style="color:#B31D14">searchproducts.php - multiple exercises</a></h4>
+</p>
+
+         <h4><a href="searchproducts.php" style="color:#B31D14">searchproducts.php - multiple exercises</a></h4>
           <p>Page contains code that fetches multiple entries from the DB, can be abused to extract arbitrary data</p>
 
           <h4><a href="secondorder_register.php" style="color:#B31D14">secondorder_register.php - allows registration with quotes</a></h4>
-          <p>Page allows user registration even with quotes. Quotes are nullified by appending a second quote to make them literals. Data is stored to backend tables without being verified if data was clean or not. The problem with doubling-up approach arises in more complex situations where the same item of data passes through several SQL queries, being written to the database and then read back more than once.</p>
+          <p>
+            Halaman yang memberikan akses user untuk dapat menggunakan beberapa query yang tidak di lakukan validasi, sehingga bisa membahayakan sistem.
+
+            </p>
 
 		  <h4><a href="secondorder_changepass.php" style="color:#B31D14">secondorder_changepass.php - allows users to change their password</a></h4>
           <p>Page doesn't function as advertised. Only used to show second order SQLi</p>
+          <h4>
+            <a href="blindsqli.php?user=voldemort"  style="color:#B31D14">blindsqli.php - vulnerable to content and time based blind SQLi</a></h4>
 
-		  <h4><a href="blindsqli.php?user=voldemort"  style="color:#B31D14">blindsqli.php - vulnerable to content and time based blind SQLi</a></h4>
           <p>Page is vulnerable to blind sql injection using both changes in content as well as response times. Data can be extracted using true and false statements.</p>
 
 		  <h4><a href="os_sqli.php?user=frodo" style="color:#B31D14">os_sqli.php - can be used to interact with the filesystem and the OS via MySQL databases</a></h4>
           <p>Can be used to interact with the OS, including reading and writing of files and other tasks.</p>
 
-      <h4><a href="examtime.php" style="color:#B31D14">Challenge questions to play around :)</p>
-
+    
         </div>
 
 
